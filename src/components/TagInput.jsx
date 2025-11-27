@@ -1,4 +1,3 @@
-// components/TagInput.jsx
 import React, { useState } from "react";
 
 const TagInput = ({ tags, setTags, existingTags }) => {
@@ -21,7 +20,7 @@ const TagInput = ({ tags, setTags, existingTags }) => {
 				type="text"
 				value={inputValue}
 				onChange={(e) => setInputValue(e.target.value)}
-				placeholder="Тег (нажмите Enter или кнопку +)"
+				placeholder="Тег"
 				onKeyDown={(e) =>
 					e.key === "Enter" && (e.preventDefault(), handleAddTag())
 				}
@@ -42,7 +41,7 @@ const TagInput = ({ tags, setTags, existingTags }) => {
 					</span>
 				))}
 			</div>
-			{/* Автодополнение из существующих тегов */}
+			{}
 			{inputValue && (
 				<div className="suggestions">
 					{existingTags

@@ -1,4 +1,3 @@
-// components/TaskItem.jsx
 import React, { useState } from "react";
 
 const TaskItem = ({ task, onUpdate, onDelete }) => {
@@ -33,7 +32,6 @@ const TaskItem = ({ task, onUpdate, onDelete }) => {
 						value={title}
 						onChange={(e) => setTitle(e.target.value)}
 					/>
-					{/* Здесь можно использовать TagInput компонент */}
 					<input
 						type="datetime-local"
 						value={deadline}

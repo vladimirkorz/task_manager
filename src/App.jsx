@@ -7,10 +7,9 @@ import ThemeToggle from "./components/ThemeToggle";
 const App = () => {
 	const [tasks, setTasks] = useState([]);
 	const [searchTerm, setSearchTerm] = useState("");
-	const [theme, setTheme] = useState("light"); // 'light' | 'dark'
+	const [theme, setTheme] = useState("light");
 	const [tags, setTags] = useState([]);
 
-	// Загрузка задач и тегов из localStorage при старте
 	useEffect(() => {
 		const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 		const savedTags = JSON.parse(localStorage.getItem("tags")) || [];
@@ -27,7 +26,6 @@ const App = () => {
 		document.documentElement.setAttribute("data-theme", theme);
 	}, [theme]);
 
-	// Сохранение в localStorage при изменении
 	useEffect(() => {
 		localStorage.setItem("tasks", JSON.stringify(tasks));
 	}, [tasks]);
@@ -41,7 +39,6 @@ const App = () => {
 		document.body.className = theme;
 	}, [theme]);
 
-	// Фильтрация задач по поиску
 	const filteredTasks = tasks.filter(
 		(task) =>
 			task.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -50,17 +47,14 @@ const App = () => {
 			)
 	);
 
-	// Функции CRUD
 	const addTask = (task) => {
 		setTasks([...tasks, { ...task, id: Date.now() }]);
-		// Добавляем новые теги в общий список
 		const newTags = task.tags.filter((tag) => !tags.includes(tag));
 		if (newTags.length > 0) setTags([...tags, ...newTags]);
 	};
 
 	const updateTask = (updatedTask) => {
 		setTasks(tasks.map((t) => (t.id === updatedTask.id ? updatedTask : t)));
-		// Обновление списка тегов при изменении
 		const allTags = [...new Set(tasks.flatMap((t) => t.tags))];
 		setTags(allTags);
 	};
