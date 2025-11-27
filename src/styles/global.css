@@ -1,0 +1,72 @@
+/* src/styles/global.css */
+:root {
+	--bg: #ffffff;
+	--text: #000000;
+	--card-bg: #f9f9f9;
+	--border: #e0e0e0;
+	--overdue: #ff6b6b;
+	--tag-bg: #e0e0ff;
+}
+
+[data-theme="dark"] {
+	--bg: #121212;
+	--text: #f0f0f0;
+	--card-bg: #1e1e1e;
+	--border: #333333;
+	--overdue: #ff9e9e;
+	--tag-bg: #3a3a5a;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		sans-serif;
+	background-color: var(--bg);
+	color: var(--text);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.app {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* Пример для overdue задач */
+.task-item.overdue {
+	border-left: 4px solid var(--overdue);
+}
+
+.tag {
+	background: var(--tag-bg);
+	padding: 2px 8px;
+	border-radius: 12px;
+	margin-right: 6px;
+	font-size: 0.85em;
+}
+
+/* styles/light.css */
+body.light {
+	--bg: #fff;
+	--text: #000;
+	--border: #ccc;
+	--overdue: #ff6b6b;
+}
+
+/* styles/dark.css */
+body.dark {
+	--bg: #1e1e1e;
+	--text: #f0f0f0;
+	--border: #444;
+	--overdue: #ff9e9e;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+	font-family: Arial, sans-serif;
+}
+
+.overdue .task-content {
+	border-left: 4px solid var(--overdue);
+}
