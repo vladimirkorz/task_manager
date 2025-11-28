@@ -10,13 +10,13 @@
 	--border: #e0e0e0;
 	--card-bg: #fafafa;
 	--input-bg: #ffffff;
-	--button-bg: #4a6cf7;
-	--button-hover: #3a5bf5;
-	--delete-bg: #ff6b6b;
-	--delete-hover: #ff5252;
-	--overdue: #ff6b6b;
+	--button-bg: #21263a;
+	--button-hover: #707070;
+	--delete-bg: #fc4040;
+	--delete-hover: #fd6d6d;
+	--overdue: #fd5353;
 	--tag-bg: #e6e9ff;
-	--tag-text: #4a6cf7;
+	--tag-text: #3f58b9;
 	--completed-text: #888888;
 	--shadow: rgba(0, 0, 0, 0.08);
 }
@@ -27,11 +27,11 @@
 	--border: #333333;
 	--card-bg: #1e1e1e;
 	--input-bg: #2a2a2a;
-	--button-bg: #5a7dff;
-	--button-hover: #6a8dff;
-	--delete-bg: #ff7a7a;
-	--delete-hover: #ff6060;
-	--overdue: #ff9e9e;
+	--button-bg: #707074;
+	--button-hover: #a8a8a8;
+	--delete-bg: #fc4040;
+	--delete-hover: #fd6d6d;
+	--overdue: #fd5353;
 	--tag-bg: #2a2d4a;
 	--tag-text: #a0b0ff;
 	--completed-text: #aaaaaa;
@@ -58,7 +58,6 @@ header {
 	align-items: center;
 	margin-bottom: 24px;
 	padding-bottom: 16px;
-	border-bottom: 1px solid var(--border);
 }
 
 header h1 {
@@ -245,7 +244,6 @@ header h1 {
 }
 
 .task-actions button {
-	width: 32px;
 	height: 32px;
 	border: none;
 	border-radius: 6px;

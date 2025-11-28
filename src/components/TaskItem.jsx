@@ -64,8 +64,8 @@ const TaskItem = ({ task, onUpdate, onDelete }) => {
 						)}
 					</div>
 					<div className="task-actions">
-						<button onClick={() => setIsEditing(true)}>✏️</button>
-						<button onClick={() => onDelete(task.id)}>🗑️</button>
+						<button onClick={() => setIsEditing(true)}>редактировать</button>
+						<button onClick={() => onDelete(task.id)}>удалить</button>
 					</div>
 				</>
 			)}
